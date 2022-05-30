@@ -3,7 +3,10 @@ function addNewItem(inputTask) {
   let arrLength = taskArray.push(inputTask);
   console.log(arrLength);
   console.log(taskArray[arrLength - 1]);
-  taskList.innerHTML += taskArray[arrLength - 1];
+  taskList.innerHTML += `<li>${
+    taskArray[arrLength - 1]
+  } <button id="done-btn">Done</button>
+  <button id="remove-btn">🗑️</button></li> `;
 }
 
 function enterTaskToList(event) {
